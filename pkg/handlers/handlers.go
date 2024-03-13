@@ -23,7 +23,7 @@ type ErrorBody struct {
 func GetPlayer(req events.APIGatewayProxyRequest, tableName string, client dynamodbiface.DynamoDBAPI) (
 	*events.APIGatewayProxyResponse, error,
 ) {
-	// if the name is provided as URL parameter then call GetPlayerByName function from player package.
+	// if the id is provided as URL parameter then call GetPlayerByName function from player package.
 	id := req.QueryStringParameters["id"]
 
 	if id != "" {
